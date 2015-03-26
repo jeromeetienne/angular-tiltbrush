@@ -1,8 +1,15 @@
+//////////////////////////////////////////////////////////////////////////////////
+//		init the module
+//////////////////////////////////////////////////////////////////////////////////
 var myModule = angular.module('myModule', []);
-myModule.controller('myController', ['$scope', 'i4dsClient', function($scope, i4dsClient) {
+
+//////////////////////////////////////////////////////////////////////////////////
+//		init the controller
+//////////////////////////////////////////////////////////////////////////////////
+myModule.controller('myController', ['$scope', 'vifClient', function($scope, vifClient) {
 	// making some variable accessible to the template
-	$scope.i4dsClient = i4dsClient
-	$scope.data = i4dsClient.data
+	$scope.vifClient = vifClient
+	$scope.data = vifClient.data
 
 	// working around angular - https://coderwall.com/p/ngisma/safe-apply-in-angular-js
 	$scope.safeApply = function(fn) {
@@ -17,21 +24,19 @@ myModule.controller('myController', ['$scope', 'i4dsClient', function($scope, i4
 	};
 	
 	// update the ui with angular
-	i4dsClient.signals.updateSelectedUI.add(function(){
+	vifClient.signals.updateSelectedUI.add(function(){
 		$scope.safeApply()
 	})
 }]);
 
 
 //////////////////////////////////////////////////////////////////////////////////
-//		Factory for i4dsClient
+//		Factory for vifClient
 //////////////////////////////////////////////////////////////////////////////////
 
-myModule.factory('i4dsClient', function() {
-	return new i4dsClient()
+myModule.factory('vifClient', function() {
+	return new vifClient()
 });
-
-
 
 //////////////////////////////////////////////////////////////////////////////////
 //		Directives

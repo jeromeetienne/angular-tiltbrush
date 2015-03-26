@@ -1,0 +1,47 @@
+body {
+	margin: 0px;
+	overflow: hidden;
+}
+#viewPort {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: 300px;
+	left: 0px;
+}
+#viewPort iframe {
+	width: 100%;
+	height: 100%;
+	border-width: 0px;	
+}
+
+#sideBar {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	width: 300px;
+
+	background-color: #222;
+	color: #666;
+	
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	
+	padding: 0.2em;
+}
+
+#sideBar h3 {
+	text-align: center;
+}
+
+#sideBar a {
+	background-color: #333;
+	text-decoration: none;
+	color: inherit;
+}
+
+#sideBar a:hover {
+	background-color: #444;
+	color: #888;
+}

@@ -10,11 +10,11 @@
 			<h3>Sidebar</h3>
 			<hr>
 			<h3>Transform mode</h3>
-			<a href='javascript:void(0);' ng-click='i4dsClient.changeTranformMode("translate")'>Translate</a>
+			<a href='javascript:void(0);' ng-click='vifClient.changeTranformMode("translate")'>Translate</a>
 			-
-			<a href='javascript:void(0);' ng-click='i4dsClient.changeTranformMode("rotate")'>Rotate</a>
+			<a href='javascript:void(0);' ng-click='vifClient.changeTranformMode("rotate")'>Rotate</a>
 			-
-			<a href='javascript:void(0);' ng-click='i4dsClient.changeTranformMode("scale")'>Scale</a>
+			<a href='javascript:void(0);' ng-click='vifClient.changeTranformMode("scale")'>Scale</a>
 			<br/>
 			<hr>
 			<h3>Position</h3>
@@ -31,7 +31,7 @@
 				<input id='inputScaleX' force-number
 					type="range" min=0.1 max=5 step=0.1
 					ng-model="data.scale.x"
-					ng-change="i4dsClient.updateScale()"/>
+					ng-change="vifClient.updateScale()"/>
 				<span>{{data.scale.x | number: 2}}</span>
 			</div>
 			<div>
@@ -39,7 +39,7 @@
 				<input id='inputScaleY' force-number
 					type="range" min=0.1 max=5 step=0.1
 					ng-model="data.scale.y"
-					ng-change="i4dsClient.updateScale()"/>
+					ng-change="vifClient.updateScale()"/>
 				<span>{{data.scale.y | number: 2}}</span>
 			</div>
 			<div>
@@ -47,26 +47,26 @@
 				<input id='inputScaleZ' force-number
 					type="range" min=0.1 max=5 step=0.1
 					ng-model="data.scale.z"
-					ng-change="i4dsClient.updateScale()"/>
+					ng-change="vifClient.updateScale()"/>
 				<span>{{data.scale.z | number: 2}}</span>
 			</div>
 			<hr>
 			<h3>Scene</h3>
-			<a href='javascript:void(0);' ng-click='i4dsClient.clearScene()'>Clear Scene</a>
+			<a href='javascript:void(0);' ng-click='vifClient.clearScene()'>Clear Scene</a>
 			-
-			<a href='javascript:void(0);' ng-click='i4dsClient.deleteSelected()'>delete Selected</a>
+			<a href='javascript:void(0);' ng-click='vifClient.deleteSelected()'>delete Selected</a>
 			<hr>
 			<h3>Add Object</h3>
-			<a href='javascript:void(0);' ng-click='i4dsClient.addCube()'>Add Cube</a>
+			<a href='javascript:void(0);' ng-click='vifClient.addCube()'>Add Cube</a>
 			-
-			<a href='javascript:void(0);' ng-click='i4dsClient.addSphere()'>Add Sphere</a>
+			<a href='javascript:void(0);' ng-click='vifClient.addSphere()'>Add Sphere</a>
 		</div>
 		<script src="three.js/editor/js/libs/signals.min.js"></script>
 		<script>
 			window.Signals = signals;
 			delete window.signals;
 		</script>
-		<script src="i4dsClient.js"></script>
+		<script src="vifClient.js"></script>
 		<script src="angularMain.js"></script>
 	</body>
 </html>
