@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="ThreeViewerApp">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <base href="/v3/" />
+
+        <link rel="stylesheet" href="/v3/css/demo.css">
+        <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+
+        <script src="/v3/vendor/base.js"></script>
+        <script src="/v3/vendor/deps.js"></script>
+
+        <script>
+            var Viewer = {};
+
+            var ThreeViewer = {};
+        </script>
+
+        <script src="/v3/vendor/jquery-2.1.1.js"></script>
+        <script src="/v3/vendor/three.69.js"></script>
+        <script src="/v3/vendor/angular.js"></script>
+        <script src="/v3/vendor/angular-route.js"></script>
+
+
+        <script src="/v3/js/ng/app-controller.js"></script>
+        <script src="/v3/js/ng/canvasevents-directive.js"></script>
+        <script src="/v3/js/ng/viewer-service.js"></script>
+        <script src="/v3/js/ng/drawing-service.js"></script>
+        <script src="/v3/js/ng/messagebus-service.js"></script>
+        <script src="/v3/js/app.module.js"></script>
+        <script src="/v3/js/app.route.js"></script>
+
+        <script src="/v3/js/threeViewer/ViewerScene.js"></script>
+        <script src="/v3/js/threeViewer/ViewerSetup.js"></script>
+
+        <script src="/v3/vendor/three/DDSLoader.js"></script>
+        <script src="/v3/vendor/three/MTLLoader.js"></script>
+        <script src="/v3/vendor/three/OBJMTLLoader.js"></script>
+        <script src="/v3/vendor/three/OBJLoader.js"></script>
+        <script src="/v3/vendor/three/TransformControls.js"></script>
+        <script src="/v3/vendor/three/EditorControls.js"></script>
+    </head>
+    <body ng-view></body>
+</html>
