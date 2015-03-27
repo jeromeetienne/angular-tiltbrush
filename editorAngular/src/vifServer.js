@@ -1,6 +1,14 @@
+/**
+ * viewport-in-iframe server
+ * - it is to be used from the 3d viewport iframe
+ */
 var vifServer = (function(editor){
 	'use strict';
 	var vifServer = {};
+	
+	//////////////////////////////////////////////////////////////////////////////////
+	//		list of functions to be called 
+	//////////////////////////////////////////////////////////////////////////////////
 
 	vifServer.getSelected	= function(){
 		return editor.selected
@@ -63,6 +71,31 @@ var vifServer = (function(editor){
 		editor.select( mesh );
 	}
 	
+	
+	vifServer.addPointLight	= function(){
+		var color = 0xffffff;
+		var intensity = 1;
+		var distance = 0;
+
+		var light = new THREE.PointLight( color, intensity, distance );
+		light.position.set( 0.5, 1, 0.75 ).multiplyScalar( 200 );
+
+		editor.addObject( light );
+		editor.select( light );
+	}
+
+	vifServer.addDirectionalLight	= function(){
+		var color = 0xffffff;
+		var intensity = 1;
+
+		var light = new THREE.DirectionalLight( color, intensity );
+
+		light.position.set( 0.5, 1, 0.75 ).multiplyScalar( 200 );
+
+		editor.addObject( light );
+		editor.select( light );
+	}
+
 	vifServer.clearScene = function(){
 		editor.clear()
 	}

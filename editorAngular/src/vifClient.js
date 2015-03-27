@@ -1,3 +1,7 @@
+/**
+ * viewport-in-iframe client
+ * - it is to be used from the main UI frame
+ */
 var vifClient = function(){
 	window._vifClient = this	// to be called by the server
 	// initial data
@@ -95,6 +99,20 @@ vifClient.prototype.addSphere = function(){
 	var vifServer = this._getVifServer()
 	
 	vifServer.addSphere();
+}
+
+
+vifClient.prototype.addPointLight = function(){
+	var vifServer = this._getVifServer()
+	
+	vifServer.addPointLight();
+}
+
+
+vifClient.prototype.addDirectionalLight = function(){
+	var vifServer = this._getVifServer()
+	
+	vifServer.addDirectionalLight();
 }
 
 vifClient.prototype.clearScene = function(){
